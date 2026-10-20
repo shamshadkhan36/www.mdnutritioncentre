@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Nutrition Centre — Strong Body. Sharp Mind. Smart Nutrition.</title>
+    <meta name="description" content="Personalized wellness coaching by Senior Wellness Coach Mahammed Mujeeb to help you achieve sustainable health, better energy, and a confident lifestyle in Guntur and online.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #609432;
+            --primary-green-dark: #4b7725;
+            --primary-green-light: #7cb83e;
+            --whatsapp-green: #25D366;
+            --dark-btn: #1f1f1f;
+            --dark-text: #222222;
+            --muted-text: #666666;
+            --border-light: #e8e8e5;
+            --bg-light: #fbfbf9;
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Poppins', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--dark-text);
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------------- TOP BAR ---------------- */
+        .top-bar {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            padding: 9px 0;
+            font-size: 13.5px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .top-bar-left a {
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-bar-left a:hover {
+            text-decoration: underline;
+        }
+
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------- MAIN HEADER & NAV ---------------- */
+        .main-header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            color: var(--primary-green);
+            font-size: 32px;
+            transform: rotate(-15deg);
+        }
+
+        .logo-text h2 {
+            font-family: var(--font-serif);
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--primary-green-dark);
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark-btn);
+            font-weight: 600;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-menu a {
+            font-size: 14.5px;
+            font-weight: 500;
+            color: #333333;
+            position: relative;
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-green);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-appointment {
+            background-color: var(--dark-btn);
+            color: #ffffff !important;
+            padding: 11px 22px;
+            border-radius: 4px;
+            font-size: 13.5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            border: 2px solid var(--dark-btn);
+        }
+
+        .btn-appointment:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(96, 148, 50, 0.25);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero-section {
+            position: relative;
+            min-height: 560px;
+            background: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.1) 100%);
+        }
+
+        .hero-card {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 45px 50px;
+            max-width: 580px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.14);
+            border-left: 5px solid var(--primary-green);
+            margin: 40px 0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(96, 148, 50, 0.12);
+            color: var(--primary-green-dark);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero-card h1 {
+            font-family: var(--font-serif);
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--primary-green-dark);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .hero-card p {
+            color: #555555;
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.65;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            background-color: var(--dark-btn);
+            color: #ffffff;
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .hero-btn:hover {
+            background-color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+
+        .hero-btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+            padding: 13px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .hero-btn-whatsapp:hover {
+            background-color: #1eb855;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------- STATS BAR ---------------- */
+        .stats-bar {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-light);
+            padding: 24px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-green);
+            line-height: 1.1;
+        }
+
+        .stat-item p {
+            font-size: 13.5px;
+            color: var(--muted-text);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ---------------- SECTION: 3 FEATURE CARDS ---------------- */
+        .feature-cards-section {
+            padding: 45px 0 20px;
+        }
+
+        .feature-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .banner-card {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            border-radius: 4px;
+        }
+
+        .banner-card img.bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            z-index: 1;
+        }
+
+        .banner-card:hover img.bg-img {
+            transform: scale(1.08);
+        }
+
+        .banner-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .overlay-dark {
+            background: rgba(25, 35, 30, 0.65);
+        }
+
+        .overlay-green {
+            background: rgba(96, 148, 50, 0.82);
+        }
+
+        .overlay-grey {
+            background: rgba(40, 50, 60, 0.65);
+        }
+
+        .banner-card:hover .overlay-dark {
+            background: rgba(25, 35, 30, 0.75);
+        }
+
+        .banner-card:hover .overlay-green {
+            background: rgba(75, 120, 35, 0.88);
+        }
+
+        .banner-card:hover .overlay-grey {
+            background: rgba(40, 50, 60, 0.75);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 3;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner-content .divider-line {
+            width: 45px;
+            height: 2px;
+            background-color: #ffffff;
+            margin-bottom: 14px;
+            transition: width 0.3s ease;
+        }
+
+        .banner-card:hover .divider-line {
+            width: 75px;
+        }
+
+        .banner-content h3 {
+            font-family: var(--font-serif);
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 6px;
+        }
+
+        .banner-content span {
+            font-size: 13px;
+            opacity: 0.92;
+            letter-spacing: 0.5px;
+        }
+
+        /* ---------------- SECTION: 3 ICON BOXES ---------------- */
+        .icon-boxes-section {
+            padding: 30px 0 60px;
+        }
+
+        .icon-boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .icon-box {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            padding: 36px 26px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .icon-box:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(96, 148, 50, 0.12);
+        }
+
+        .icon-box-icon {
+            font-size: 46px;
+            color: var(--primary-green);
+            margin-bottom: 14px;
+            line-height: 1;
+        }
+
+        .icon-box h4 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .icon-box p {
+            font-size: 14px;
+            color: var(--muted-text);
+            line-height: 1.6;
+        }
+
+        /* ---------------- SECTION: WHY CHOOSE US (MAHAMMED MUJEEB) ---------------- */
+        .adviser-section {
+            padding: 50px 0 65px;
+            background-color: var(--bg-light);
+        }
+
+        .adviser-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .adviser-image-wrap {
+            position: relative;
+            height: 420px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+        }
+
+        .adviser-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .adviser-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(96, 148, 50, 0.82);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 35px;
+            color: #ffffff;
+        }
+
+        .meditation-icon {
+            font-size: 64px;
+            margin-bottom: 18px;
+            opacity: 0.95;
+            color: #ffffff;
+        }
+
+        .adviser-image-overlay h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.35;
+            max-width: 340px;
+            margin-bottom: 12px;
+        }
+
+        .coach-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .adviser-content h2 {
+            font-family: var(--font-serif);
+            font-size: 40px;
+            font-weight: 600;
+            color: #222222;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .adviser-content h2 .green-accent {
+            color: var(--primary-green);
+            display: block;
+        }
+
+        .adviser-content p {
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .adviser-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .point-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .point-item i {
+            color: var(--primary-green);
+            font-size: 16px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-green {
+            background-color: var(--primary-green);
+            color: #ffffff !important;
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-green:hover {
+            background-color: var(--primary-green-dark);
+            border-color: var(--primary-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(96, 148, 50, 0.3);
+        }
+
+        .btn-dark {
+            background-color: var(--dark-btn);
+            color: #ffffff !important;
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid var(--dark-btn);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-dark:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------- SECTION: SUCCESS STORIES ---------------- */
+        .testimonials-section {
+            padding: 65px 0 55px;
+            background: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 38px;
+            font-weight: 600;
+            color: #222222;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--muted-text);
+            font-size: 15px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 30px 25px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .quote-icon {
+            font-size: 30px;
+            color: var(--primary-green);
+            opacity: 0.3;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card p {
+            font-size: 14.5px;
+            color: #444;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .client-info h4 {
+            font-family: var(--font-serif);
+            font-size: 17px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .client-info span {
+            font-size: 12.5px;
+            color: var(--primary-green-dark);
+            font-weight: 500;
+        }
+
+        /* ---------------- SECTION: 4-COLUMN GALLERY GRID ---------------- */
+        .gallery-section {
+            padding: 20px 0 65px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(96, 148, 50, 0.45);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-overlay i {
+            color: #ffffff;
+            font-size: 24px;
+            background: rgba(0,0,0,0.4);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ---------------- SECTION: UPCOMING EVENTS ---------------- */
+        .events-section {
+            position: relative;
+            padding: 70px 0 85px;
+            background: linear-gradient(135deg, rgba(75, 120, 35, 0.94), rgba(50, 85, 25, 0.96)), url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+            color: #ffffff;
+        }
+
+        .events-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .events-section-title h2 {
+            font-family: var(--font-serif);
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .event-card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .event-image-wrap {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .event-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .event-image-overlay h4 {
+            font-family: var(--font-serif);
+            font-size: 19px;
+            color: #ffffff;
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .event-body {
+            padding: 22px 20px 0;
+            color: #555555;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13.5px;
+        }
+
+        .event-meta i {
+            color: var(--primary-green);
+            font-size: 15px;
+            width: 16px;
+        }
+
+        .event-footer-btn {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 22px;
+            background: #ffffff;
+        }
+
+        .event-btn-dark {
+            background-color: var(--dark-btn);
+            color: #ffffff !important;
+            padding: 9px 24px;
+            font-size: 13.5px;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .event-btn-dark:hover {
+            background-color: var(--primary-green);
+        }
+
+        .event-btn-green {
+            background-color: var(--primary-green);
+            color: #ffffff !important;
+            padding: 9px 24px;
+            font-size: 13.5px;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .event-btn-green:hover {
+            background-color: var(--primary-green-dark);
+        }
+
+        /* ---------------- FLOATING WHATSAPP & LEAF TOP BUTTON ---------------- */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .leaf-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 52px;
+            background-color: var(--primary-green);
+            color: #ffffff;
+            border-radius: 50% 0 50% 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition);
+            transform: rotate(-45deg);
+        }
+
+        .leaf-top-btn span {
+            transform: rotate(45deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .leaf-top-btn span i {
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .leaf-top-btn:hover {
+            background-color: var(--primary-green-dark);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            transform: rotate(-45deg) scale(1.08);
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        .site-footer {
+            background-color: #1a1e1b;
+            color: #aaaaaa;
+            padding: 60px 0 25px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 45px;
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-family: var(--font-serif);
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background-color: var(--primary-green);
+        }
+
+        .footer-col p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-green-light);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        /* ---------------- RESPONSIVENESS ---------------- */
+        @media (max-width: 992px) {
+            .feature-cards-grid,
+            .events-grid,
+            .testimonials-grid,
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .adviser-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .adviser-image-wrap {
+                height: 320px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .feature-cards-grid,
+            .icon-boxes-grid,
+            .events-grid,
+            .testimonials-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .top-bar-left span:not(:first-child) {
+                display: none;
+            }
+
+            .hero-card {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .hero-card h1 {
+                font-size: 28px;
+            }
+
+            .adviser-content h2 {
+                font-size: 30px;
+            }
+
+            .adviser-points {
+                grid-template-columns: 1fr;
+            }
+
+            .events-section-title h2 {
+                font-size: 32px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span>80% Nutrition. 20% Exercise. 100% Mindset.</span>
+                <span style="opacity: 0.6;">|</span>
+                <a href="tel:+919700907707"><i class="fa-solid fa-phone"></i> +91 97009 07707</a>
+                <span style="opacity: 0.6;">|</span>
+                <a href="mailto:mdnutritioncentre@gmail.com"><i class="fa-solid fa-envelope"></i> Guntur, AP</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-links">
+                    <a href="https://wa.me/919700907707" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER & NAVIGATION -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-leaf logo-icon"></i>
+                    <div class="logo-text">
+                        <h2>MD Nutrition</h2>
+                        <span>Centre · Health Coach</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Menu -->
+                <nav class="nav-menu" id="primaryNav">
+                    <a href="#" class="active">Home</a>
+                    <a href="#about">About Coach</a>
+                    <a href="#services">Services</a>
+                    <a href="#success-stories">Success Stories</a>
+                    <a href="#events">Events</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <a href="https://calendly.com/mujeeb-nutrition/one-to-one-meeting" target="_blank" class="btn-appointment">
+                        <i class="fa-regular fa-calendar-check"></i> Book Free Assessment
+                    </a>
+                    <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-card">
+                <div class="hero-tag">Certified Nutrition & Wellness</div>
+                <h1>Strong Body.<br>Sharp Mind. Smart Nutrition.</h1>
+                <p>
+                    Personalized wellness coaching under <strong>Senior Wellness Coach Mahammed Mujeeb</strong> to help you achieve sustainable health, better energy, and a confident lifestyle through science-backed, food-first guidance.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://calendly.com/mujeeb-nutrition/one-to-one-meeting" target="_blank" class="hero-btn">
+                        <i class="fa-solid fa-calendar-days"></i> Book Appointment
+                    </a>
+                    <a href="https://wa.me/919700907707" target="_blank" class="hero-btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Years Coaching Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>250+</h3>
+                    <p>Clients Guided to Results</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Client Follow-Through Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.9★</h3>
+                    <p>Average Client Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. THREE CATEGORY CARDS SECTION -->
+    <section class="feature-cards-section" id="services">
+        <div class="container">
+            <div class="feature-cards-grid">
+                <!-- Card 1 -->
+                <div class="banner-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80" alt="Weight Management" class="bg-img">
+                    <div class="banner-overlay overlay-dark"></div>
+                    <div class="banner-content">
+                        <div class="divider-line"></div>
+                        <h3>Weight Management</h3>
+                        <span>Sustainable Fat Loss & Muscle Retention</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="banner-card">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=700&q=80" alt="Diabetes Support" class="bg-img">
+                    <div class="banner-overlay overlay-green"></div>
+                    <div class="banner-content">
+                        <div class="divider-line"></div>
+                        <h3>Diabetes & Sugar Control</h3>
+                        <span>Lifestyle-Focused Metabolic Health</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="banner-card">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="PCOD & Thyroid Care" class="bg-img">
+                    <div class="banner-overlay overlay-grey"></div>
+                    <div class="banner-content">
+                        <div class="divider-line"></div>
+                        <h3>PCOD & Thyroid Care</h3>
+                        <span>Hormonal Balance & Sustainable Habits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THREE FEATURE ICON BOXES -->
+    <section class="icon-boxes-section">
+        <div class="container">
+            <div class="icon-boxes-grid">
+                <!-- Icon 1: Calendar / Schedule Check -->
+                <div class="icon-box">
+                    <div class="icon-box-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <h4>1. Free Health Assessment</h4>
+                    <p>Schedule your 1-on-1 consultation online or at our Guntur centre to analyze your routine and metabolic health.</p>
+                </div>
+
+                <!-- Icon 2: Truly Personalized Nutrition -->
+                <div class="icon-box">
+                    <div class="icon-box-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4>2. Food-First & Sustainable</h4>
+                    <p>No crash diets, unnecessary supplements, or extreme restrictions—just wholesome, portion-controlled daily meals.</p>
+                </div>
+
+                <!-- Icon 3: Ongoing Guidance -->
+                <div class="icon-box">
+                    <div class="icon-box-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h4>3. Continuous WhatsApp Support</h4>
+                    <p>Progress tracking, plan adjustments, and direct WhatsApp guidance to keep you consistent and motivated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE MD NUTRITION CENTRE (MAHAMMED MUJEEB) -->
+    <section class="adviser-section" id="about">
+        <div class="container">
+            <div class="adviser-grid">
+                <!-- Left Column with Image + Green Overlay & Meditation Silhouette -->
+                <div class="adviser-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Health Consultation">
+                    <div class="adviser-image-overlay">
+                        <div class="meditation-icon">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <h3>Feel complete Inside and Outside</h3>
+                        <span class="coach-badge">Mahammed Mujeeb · Senior Wellness Coach</span>
+                    </div>
+                </div>
+
+                <!-- Right Column with Content -->
+                <div class="adviser-content">
+                    <h2>Why Choose<br><span class="green-accent">MD Nutrition Centre?</span></h2>
+                    <p>
+                        At MD Nutrition Centre, we believe lasting health begins with the right guidance and sustainable habits. Under the leadership of <strong>Senior Wellness Coach Mahammed Mujeeb</strong>, we provide personalized nutrition and lifestyle coaching designed to help you achieve healthy weight management, improved well-being, and lifelong vitality.
+                    </p>
+                    <div class="adviser-points">
+                        <div class="point-item"><i class="fa-solid fa-circle-check"></i> Truly Personalized Nutrition</div>
+                        <div class="point-item"><i class="fa-solid fa-circle-check"></i> Food-First Approach</div>
+                        <div class="point-item"><i class="fa-solid fa-circle-check"></i> 100+ Kgs Weight Lost</div>
+                        <div class="point-item"><i class="fa-solid fa-circle-check"></i> Science-Backed Care</div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://calendly.com/mujeeb-nutrition/one-to-one-meeting" target="_blank" class="btn-green">
+                            <i class="fa-regular fa-calendar-check"></i> Book Assessment
+                        </a>
+                        <a href="https://wa.me/919700907707" target="_blank" class="btn-dark">
+                            <i class="fa-brands fa-whatsapp"></i> Chat with Coach
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SUCCESS STORIES (FROM REAL CLIENTS) -->
+    <section class="testimonials-section" id="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real People. Real Results.</h2>
+                <p>Every health journey is built on trust, personalized care, and lasting lifestyle change.</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>“My name is Suresh, living with diabetes for over 20 years and on insulin injections for 5 years. Joining MD Nutrition Centre completely changed that. I no longer need insulin and manage with just one tablet! My energy is completely back.”</p>
+                    </div>
+                    <div class="client-info">
+                        <h4>Suresh P. V.</h4>
+                        <span>Civil Contractor · Diabetes Recovery</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>“The plan felt realistic from day one. There were no crash diets or unrealistic restrictions—just simple, sustainable habits that fit my lifestyle. Over time, I felt healthier, lighter, and more energetic.”</p>
+                    </div>
+                    <div class="client-info">
+                        <h4>Mohammed Abdul Shafi</h4>
+                        <span>Sustainable Weight Management</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>“The coaching went far beyond food. Sleep, stress, daily movement—everything came together seamlessly. My PCOS symptoms are finally manageable and my confidence is restored.”</p>
+                    </div>
+                    <div class="client-info">
+                        <h4>Sravani P.</h4>
+                        <span>PCOS & Hormonal Wellness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOUR-COLUMN ACTIVITY & NUTRITION GALLERY -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Active Lifestyle">
+                    <div class="gallery-item-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80" alt="Fitness Training">
+                    <div class="gallery-item-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Clinical Nutrition Consultation">
+                    <div class="gallery-item-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Healthy Nutrition Bowl">
+                    <div class="gallery-item-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. UPCOMING EVENTS & WORKSHOPS -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <div class="events-section-title">
+                <h2>Upcoming Workshops & Programs</h2>
+            </div>
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" alt="Sugar Control Masterclass">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Guntur Centre & Live Online</span>
+                        </div>
+                        <div class="event-meta">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Every Saturday / 10:00 am - 11:30 am</span>
+                        </div>
+                    </div>
+                    <div class="event-footer-btn">
+                        <a href="https://wa.me/919700907707?text=Hi%20Coach,%20I%20want%20to%20register%20for%20the%20Sugar%20Control%20Workshop" target="_blank" class="event-btn-dark">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Mindful Nutrition Workshop">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Virtual Session (Zoom)</span>
+                        </div>
+                        <div class="event-meta">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Monthly / 06:00 pm - 07:30 pm</span>
+                        </div>
+                    </div>
+                    <div class="event-footer-btn">
+                        <a href="https://wa.me/919700907707?text=Hi%20Coach,%20I%20want%20to%20join%20the%20Mindful%20Nutrition%20Session" target="_blank" class="event-btn-dark">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="PCOD Wellness Circle">
+                        <div class="event-image-overlay">
+                            <h4>Hormonal Health & PCOD Wellness Month</h4>
+                        </div>
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Community Interactive Group</span>
+                        </div>
+                        <div class="event-meta">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Weekly Progress Tracking</span>
+                        </div>
+                    </div>
+                    <div class="event-footer-btn">
+                        <a href="https://chat.whatsapp.com/IF8lLJ6M1GI77Kv7LwZKWz" target="_blank" class="event-btn-green">Join Group</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 18px;">
+                        <i class="fa-solid fa-leaf logo-icon" style="color: var(--primary-green-light);"></i>
+                        <div class="logo-text">
+                            <h2 style="color: #ffffff;">MD Nutrition</h2>
+                            <span style="color: #bbbbbb;">Centre · Health Coach</span>
+                        </div>
+                    </div>
+                    <p>Coaching by <strong>Mahammed Mujeeb</strong> · Certified Wellness Coach in Nutrition. Helping you achieve a Strong Body, Sharp Mind, and Smart Nutrition with food-first habits.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Coach</a></li>
+                        <li><a href="#services">Our Programs</a></li>
+                        <li><a href="#success-stories">Success Stories</a></li>
+                        <li><a href="https://forms.gle/KyWakw7E8ptdWNvy8" target="_blank">Registration Form</a></li>
+                        <li><a href="https://chat.whatsapp.com/IF8lLJ6M1GI77Kv7LwZKWz" target="_blank">WhatsApp Group</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Specialized Care</h4>
+                    <ul>
+                        <li><a href="#services">Weight Management</a></li>
+                        <li><a href="#services">Sugar Control (Diabetes)</a></li>
+                        <li><a href="#services">PCOD / PMOS Care</a></li>
+                        <li><a href="#services">Thyroid Support</a></li>
+                        <li><a href="#services">Blood Pressure & Heart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color: var(--primary-green-light); margin-right: 8px;"></i> Guntur, Andhra Pradesh, India</p>
+                    <p><i class="fa-solid fa-phone" style="color: var(--primary-green-light); margin-right: 8px;"></i> <a href="tel:+919700907707" style="color:#aaa;">+91 97009 07707</a></p>
+                    <p><i class="fa-solid fa-envelope" style="color: var(--primary-green-light); margin-right: 8px;"></i> <a href="mailto:mdnutritioncentre@gmail.com" style="color:#aaa;">mdnutritioncentre@gmail.com</a></p>
+                    <p><i class="fa-brands fa-whatsapp" style="color: var(--whatsapp-green); margin-right: 8px;"></i> <a href="https://wa.me/919700907707" target="_blank" style="color:#aaa;">WhatsApp Consultation</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MD Nutrition Centre. All Rights Reserved. Coaching by Mahammed Mujeeb.</p>
+                <p>Strong Body · Sharp Mind · Smart Nutrition</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 11. FLOATING BUTTONS -->
+    <a href="https://wa.me/919700907707" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="#" class="leaf-top-btn" id="scrollTopBtn" title="Back to Top">
+        <span>
+            <i class="fa-solid fa-chevron-up"></i>
+            Top
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.visibility = 'visible';
+            } else {
+                scrollBtn.style.opacity = '0.6';
+            }
+        });
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const toggleBtn = document.getElementById('mobileNavToggle');
+        const navMenu = document.getElementById('primaryNav');
+        toggleBtn.addEventListener('click', () => {
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '85px';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#ffffff';
+                navMenu.style.padding = '20px';
+                navMenu.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
